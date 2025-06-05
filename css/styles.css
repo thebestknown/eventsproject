@@ -171,6 +171,32 @@ footer {
   padding: 0;
 }
 
+.event-detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.event-detail-container img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.event-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.event-info p {
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
 @media (max-width: 480px) {
   .search-bar {
     flex-direction: column;
