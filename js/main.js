@@ -24,22 +24,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function renderEvents(events) {
-    const container = document.getElementById("eventList");
-    container.innerHTML = "";
+function renderEvents(events) {
+  const eventList = document.getElementById("eventList");
+  eventList.innerHTML = "";
 
-    events.forEach(event => {
-      const div = document.createElement("div");
-      div.classList.add("event-card");
-
-      div.innerHTML = `
-        <h3>${event.name}</h3>
-        <p><strong>Venue:</strong> ${event._embedded.venues[0].name}</p>
-        <p><strong>Date:</strong> ${event.dates.start.localDate} at ${event.dates.start.localTime}</p>
-        <a href="${event.url}" target="_blank">Buy Tickets 🎟️</a>
-      `;
-
-      container.appendChild(div);
-    });
+  if (events.length === 0) {
+    eventList.innerHTML = "<p>No events found for this city.</p>";
+    return;
   }
+
+  events.forEach(event => {
+    const div = document.createElement("div");
+    div.classList.add("event-card");
+
+    const venue = event._embedded.venues[0];
+    const image = event.images?.[0]?.url || "";
+
+    div.innerHTML = `
+      <img src="${image}" alt="${event.name}" class="event-img">
+      <div class="event-info">
+        <h3>${event.name}</h3>
+        <p><strong>📍 Venue:</strong> ${venue.name} - ${venue.city.name}</p>
+        <p><strong>📅 Date:</strong> ${event.dates.start.localDate}</p>
+        <p><strong>⏰ Time:</strong> ${event.dates.start.localTime || "Not specified"}</p>
+        <a href="${event.url}" target="_blank" class="buy-button">Buy Tickets 🎟️</a>
+        <button class="details-button" data-id="${event.id}">See more</button>
+      </div>
+    `;
+
+    eventList.appendChild(div);
+  });
+
+  // to see "more details"
+  const detailButtons = document.querySelectorAll(".details-button");
+  detailButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const eventId = button.getAttribute("data-id");
+      localStorage.setItem("selectedEventId", eventId);
+      window.location.href = "event.html";
+    });
+  });
+}
+
 });

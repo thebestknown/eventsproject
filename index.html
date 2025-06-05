@@ -10,21 +10,46 @@
 </head>
 
 <body>
-  <header>
-    <h1>🎵 Music Events Agenda</h1>
-    <input type="text" id="cityInput" placeholder="Search your city...">
-    <button id="searchBtn">Search</button>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">🎵 Music Events</div>
+    <nav class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Genres</a>
+      <a href="#">Cities</a>
+      <a href="favorites.html">Favorites</a>
+      <button class="btn">Login</button>
+    </nav>
   </header>
 
+  <section class="hero">
+    <h1>Find the best concerts near you</h1>
+    <p>Discover live music events in your city and never miss your favorite artists again.</p>
+
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Enter your city..." />
+      <button id="searchBtn">Search</button>
+    </div>
+  </section>
+
   <main>
-    <section id="eventList">
+    <section id="eventList" class="event-grid">
       <!-- the events go here -->
     </section>
   </main>
 
   <footer>
-    <a href="map.html">🗺️ View Map</a> |
-    <a href="favorites.html">❤️ Favorites</a>
+    <div class="footer-content">
+      <div>© 2024 Music Events. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
