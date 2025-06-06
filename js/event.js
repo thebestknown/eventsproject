@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const apiKey = "x7MmszAlCl6Bb4QCcjuuAaEoJ0lGGCfT";
   const eventId = localStorage.getItem("selectedEventId");
-
   if (!eventId) {
     document.getElementById("eventDetails").innerText = "No event selected.";
     return;
+  }
+
+  const backButton = document.getElementById("backButton");
+  const selectedCity = localStorage.getItem("selectedCity");
+
+  if (backButton && selectedCity) {
+    backButton.setAttribute("href", `index.html?city=${encodeURIComponent(selectedCity)}`);
+  } else {
+    backButton.setAttribute("href", "index.html");
   }
 
   const url = `https://app.ticketmaster.com/discovery/v2/events/${eventId}.json?apikey=${apiKey}`;

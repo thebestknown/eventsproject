@@ -197,6 +197,20 @@ footer {
   margin: 0.5rem 0;
 }
 
+.favorite-button, .remove-button {
+  background-color: #FFD700;
+  color: #2C3E50;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.favorite-button:hover, .remove-button:hover {
+  background-color: #e0bd00;
+}
+
 @media (max-width: 480px) {
   .search-bar {
     flex-direction: column;
