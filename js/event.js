@@ -62,9 +62,26 @@ function renderEventDetails(event) {
           : ""
       }
       <a href="${event.url}" target="_blank" class="buy-button">Buy Tickets 🎟️</a>
+      <button id="addFavoriteBtn" class="favorite-button">❤️ Add to Favorites</button>
     </div>
   `;
 
   document.getElementById("eventDetails").innerHTML = html;
+
+  // add event to favorites
+  const addFavBtn = document.getElementById("addFavoriteBtn");
+  if (addFavBtn) {
+    addFavBtn.addEventListener("click", () => {
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const alreadyExists = favorites.some(ev => ev.id === event.id);
+      if (!alreadyExists) {
+        favorites.push(event);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert("Added to favorites!");
+      } else {
+        alert("This event is already in your favorites.");
+      }
+    });
+  }
 }
 
