@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genres | Music Events Agenda</title>
+  <meta name="description" content="Browse music events by genre like Rock, Pop, Jazz and more.">
+  <meta name="author" content="Jeimy Espinoza">
+  <meta name="twitter:creator" content="@jeimyEspinoza">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">🎵 Music Events</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="genre.html" class="active">Genres</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="genre-filter">
+      <h2>Select a genre:</h2>
+      <div class="genre-buttons">
+        <button class="genre-btn" data-genre="rock">🎸 Rock</button>
+        <button class="genre-btn" data-genre="pop">🎤 Pop</button>
+        <button class="genre-btn" data-genre="jazz">🎷 Jazz</button>
+        <button class="genre-btn" data-genre="hip-hop">🎧 Hip-Hop</button>
+        <button class="genre-btn" data-genre="classical">🎻 Classical</button>
+      </div>
+    </section>
+
+    <section id="genreEvents" class="event-grid">
+      <!-- Events will appear here -->
+    </section>
+  </main>
+
+  <script src="js/genre.js"></script>
+</body>
+</html>
