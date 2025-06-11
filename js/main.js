@@ -2,10 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBtn = document.getElementById("searchBtn");
   const cityInput = document.getElementById("cityInput");
 
+   if (!searchBtn || !cityInput) return;
+
   searchBtn.addEventListener("click", () => {
     const city = cityInput.value.trim();
     if (city !== "") {
-      localStorage.setItem("selectedCity", city);
       getEventsByCity(city);
     }
   });
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // listener for favorite buttons
+    // Listener for favorite buttons
     const favoriteButtons = document.querySelectorAll(".favorite-button");
     favoriteButtons.forEach(button => {
       button.addEventListener("click", () => {
@@ -103,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // to save on LocalStorage 
+  // to save on LocalStorage (optional for external calls)
   function saveFavorite(event) {
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     const exists = favorites.some(e => e.id === event.id);

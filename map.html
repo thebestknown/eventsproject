@@ -22,10 +22,40 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <style>
+    .map-page {
+      padding: 1rem;
+    }
+
+    .map-search-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .map-search-bar input {
+      padding: 0.5rem;
+      width: 220px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .map-search-bar button {
+      padding: 0.5rem 1rem;
+      background-color: #FF6347;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     #map {
-      height: 90vh;
+      height: 80vh;
       width: 100%;
-      margin: 1rem auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -34,15 +64,19 @@
   <header class="header">
     <div class="logo">🎵 Music Events</div>
     <nav class="nav-links">
-      <a href="#">About</a>
+      <a href="index.html">Home</a>
       <a href="#">Genres</a>
-      <a href="map.html">Map</a>
+      <a href="map.html" class="active">Map</a>
       <a href="favorites.html">Favorites</a>
       <button class="btn">Login</button>
     </nav>
   </header>
 
-  <main>
+  <main class="map-page">
+    <div class="map-search-bar">
+      <input type="text" id="citySearch" placeholder="Search another city..." />
+      <button id="searchCityBtn">Search</button>
+    </div>
     <div id="map"></div>
   </main>
 
