@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   searchBtn.addEventListener("click", () => {
     const city = cityInput.value.trim();
     if (city !== "") {
+      localStorage.setItem("selectedCity", city);
       getEventsByCity(city);
     }
   });

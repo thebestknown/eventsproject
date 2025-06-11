@@ -15,11 +15,10 @@
   <meta name="twitter:title" content="Music Events Agenda">
   <meta name="twitter:description" content="Discover concerts and festivals in your city and beyond.">
   <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Music+Events+Agenda">
-  <meta name="twitter:creator" content="@jeimyEspinoza">
   <link rel="icon" href="">
   <link rel="icon" href="" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
     <nav class="nav-links">
       <a href="#">About</a>
       <a href="#">Genres</a>
-      <a href="#">Cities</a>
+      <a href="map.html">Map</a>
       <a href="favorites.html">Favorites</a>
       <button class="btn">Login</button>
     </nav>
@@ -51,6 +50,10 @@
       <!-- the events go here -->
     </section>
   </main>
+
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
 
   <footer>
     <div class="footer-content">

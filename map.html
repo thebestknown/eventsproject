@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jeimy Espinoza">
+  <meta name="description" content="Find music events near you on an interactive map. Discover locations, routes and venues visually.">
+  <meta property="og:title" content="Events Map | Music Events Agenda">
+  <meta property="og:description" content="Explore music events by location on an interactive map. View venues, artists and plan your route.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Music+Events+Map">
+  <meta property="og:url" content="https://thebestknown.github.io/eventsproject/map.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Events Map | Music Events Agenda">
+  <meta name="twitter:description" content="Find your next concert visually. Explore music events on the map and plan your route.">
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Music+Events+Map">
+  <meta name="twitter:creator" content="@jeimyEspinoza">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <title>Events Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    #map {
+      height: 90vh;
+      width: 100%;
+      margin: 1rem auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">🎵 Music Events</div>
+    <nav class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Genres</a>
+      <a href="map.html">Map</a>
+      <a href="favorites.html">Favorites</a>
+      <button class="btn">Login</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="map"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
