@@ -27,7 +27,7 @@
   <header class="header">
     <div class="logo">🎵 Music Events</div>
     <nav class="nav-links">
-      <a href="#">About</a>
+      <a href="index.html">Home</a>
       <a href="#">Genres</a>
       <a href="map.html">Map</a>
       <a href="favorites.html">Favorites</a>
@@ -35,25 +35,35 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Find the best concerts near you</h1>
-    <p>Discover live music events in your city and never miss your favorite artists again.</p>
+  <main>
+    <section class="hero">
+      <h1>Find the best concerts near you</h1>
+      <p>Discover live music events in your city and never miss your favorite artists again.</p>
 
     <div class="search-bar">
       <input type="text" id="cityInput" placeholder="Enter your city..." />
       <button id="searchBtn">Search</button>
     </div>
-  </section>
+    </section>
 
-  <main>
     <section id="eventList" class="event-grid">
       <!-- the events go here -->
     </section>
+
+    <section class="map-toggle">
+      <button id="toggleMapBtn">🗺️ Show Global Event Map</button>
+    </section>
+
+    <section id="mapSection" class="map-container hidden">
+      <div id="globalMap"></div>
+    </section>
+
   </main>
 
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/global-map.js"></script>
+
 
   <footer>
     <div class="footer-content">
