@@ -22,6 +22,20 @@
   <script src="js/modal.js"></script>
 </head>
 
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <span class="modal-close" onclick="closeLoginModal()">×</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required><br><br>
+        <input type="password" id="password" placeholder="Password" required><br><br>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p id="loginMsg" style="color: red; margin-top: 10px;"></p>
+    </div>
+  </div>
+
 <body>
 
   <!-- HEADER -->
@@ -35,7 +49,7 @@
       <a href="genres.html">Genres</a>
       <a href="map.html">Map</a>
       <a href="favorites.html">Favorites</a>
-      <button class="btn">Login</button>
+      <button id="loginBtn" class="btn" onclick="openLoginModal()">Login</button>
     </nav>
   </header>
 

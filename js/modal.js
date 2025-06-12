@@ -30,3 +30,40 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("click", (e) => {
   if (e.target.id === "modalOverlay") closeModal();
 });
+
+function openLoginModal() {
+    document.getElementById("loginModal").classList.remove("hidden");
+  }
+
+  function closeLoginModal() {
+    document.getElementById("loginModal").classList.add("hidden");
+  }
+
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  // to simulate the login
+  if (email === "admin@example.com" && password === "123456") {
+    localStorage.setItem("isLoggedIn", "true");
+    document.getElementById("loginMsg").style.color = "green";
+    document.getElementById("loginMsg").innerText = "Login successful!";
+    closeLoginModal();
+    updateLoginStatus();
+  } else {
+    document.getElementById("loginMsg").innerText = "Invalid credentials";
+  }
+    function updateLoginStatus() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const loginBtn = document.getElementById("loginBtn");
+    if (isLoggedIn && loginBtn) {
+      loginBtn.style.display = "none";
+    } 
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    updateLoginStatus();
+  });
+});
+
+
