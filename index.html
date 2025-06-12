@@ -15,17 +15,21 @@
   <meta name="twitter:title" content="Music Events Agenda">
   <meta name="twitter:description" content="Discover concerts and festivals in your city and beyond.">
   <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Music+Events+Agenda">
-  <link rel="icon" href="">
+  <link rel="icon" href="assets/icons/favicon.png">
   <link rel="icon" href="" type="image/png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/modal.js"></script>
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header class="header">
-    <div class="logo">🎵 Music Events</div>
+    <div class="logo">
+      <img src="assets/icons/logo-music-agenda.png" alt="Music Events Logo" class="logo-img">
+      <span>Music Events</span>
+    </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="genres.html">Genres</a>
@@ -64,17 +68,16 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="js/global-map.js"></script>
 
-
-  <footer>
-    <div class="footer-content">
-      <div>© 2024 Music Events. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="#">Contact</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; <span id="year"></span> Jeimy Espinoza. All rights reserved.</p>
+        <div class="footer-links">
+        <a href="#" onclick="showModal('contact'); return false;">Contact</a>
+        <a href="#" onclick="showModal('privacy'); return false;">Privacy</a>
+        <a href="#" onclick="showModal('terms'); return false;">Terms</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
   <script src="js/main.js"></script>
 </body>

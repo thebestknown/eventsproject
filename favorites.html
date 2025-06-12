@@ -16,13 +16,17 @@
   <meta name="twitter:title" content="Favorites | Music Events Agenda">
   <meta name="twitter:description" content="Revisit the concerts and shows you've saved.">
   <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Music+Events+Agenda">
-  <link rel="icon" href="">
+  <link rel="icon" href="assets/icons/favicon.png">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/modal.js"></script>
 </head>
 <body>
 
   <header class="header">
-    <div class="logo">🎵 Music Events</div>
+    <div class="logo">
+      <img src="assets/icons/logo-music-agenda.png" alt="Music Events Logo" class="logo-img">
+      <span>Music Events</span>
+    </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="genres.html">Genres</a>
@@ -41,6 +45,17 @@
       <!-- favorites events go here -->
     </section>
   </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; <span id="year"></span> Jeimy Espinoza. All rights reserved.</p>
+        <div class="footer-links">
+        <a href="#" onclick="showModal('contact'); return false;">Contact</a>
+        <a href="#" onclick="showModal('privacy'); return false;">Privacy</a>
+        <a href="#" onclick="showModal('terms'); return false;">Terms</a>
+        </div>
+      </div>
+    </footer>
 
   <script src="js/favorites.js"></script>
 </body>

@@ -15,11 +15,11 @@
   <meta name="twitter:title" content="Event Details | Music Events Agenda">
   <meta name="twitter:description" content="Explore the artist, venue, date and route for your favorite music event.">
   <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Music+Events+Agenda">
-  <link rel="icon" href="">
+  <link rel="icon" href="assets/icons/favicon.png">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js"></script>
   <script src="js/event.js"></script>
-
+  <script src="js/modal.js"></script>
 </head>
 
 <body>
@@ -32,6 +32,17 @@
   <main class="event-detail-container">
     <div id="eventDetails">Loading...</div>
   </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; <span id="year"></span> Jeimy Espinoza. All rights reserved.</p>
+        <div class="footer-links">
+        <a href="#" onclick="showModal('contact'); return false;">Contact</a>
+        <a href="#" onclick="showModal('privacy'); return false;">Privacy</a>
+        <a href="#" onclick="showModal('terms'); return false;">Terms</a>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>
