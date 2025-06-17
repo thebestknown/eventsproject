@@ -206,6 +206,7 @@ input[type="email"], input[type="password"] {
   font-family: 'Montserrat', sans-serif;
   color: #2C3E50;
 }
+
 .details-button {
   background-color: #2C3E50;
   color: white;
@@ -324,7 +325,6 @@ input[type="email"], input[type="password"] {
   display: none;
 }
 
-
 .genre-filter {
   text-align: center;
   margin-top: 2rem;
@@ -350,6 +350,99 @@ input[type="email"], input[type="password"] {
 
 .genre-btn:hover {
   background-color: #169c45;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.9;
+}
+
+.buy-button {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.buy-button:hover {
+  transform: scale(1.05);
+  background-color: #e5533d;
+}
+
+.details-button {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.details-button:hover {
+  transform: translateY(-2px);
+  background-color: #1a252f;
+}
+
+.favorite-button {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.favorite-button:hover {
+  transform: scale(1.05) rotate(-1deg);
+  background-color: #fdd835;
+}
+
+
+/* Modal animations */
+.modal-box {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .genre-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -390,5 +483,13 @@ input[type="email"], input[type="password"] {
     justify-content: center;
     width: 100%;
     margin-top: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 }
